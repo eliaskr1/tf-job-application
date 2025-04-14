@@ -22,11 +22,20 @@ resource "playgroundtech_application" "elias_kroon" {
 
 resource "null_resource" "provision" {
   provisioner "local-exec" {
-    command = "echo 'Provisioning Elias... Please stand by...'"
+    command = <<EOT
+    echo "   (•_•)"
+    echo "  <)   )╯ Provisioning Elias..."
+    echo "  /    \\"
+    EOT
   }
 
   provisioner "local-exec" {
     when    = destroy
-    command = "echo 'Deprovisioning Elias... Hopefully not necessary!'"
+    command = <<EOT
+      echo "   (╥_╥)"
+      echo "  <)   )╯ Deprovisioning Elias..."
+      echo "  /    \\"
+      echo "Elias has left the infrastructure."
+      EOT
   }
 }
