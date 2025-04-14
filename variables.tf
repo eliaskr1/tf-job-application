@@ -28,5 +28,4 @@ variable "github" {
 variable "homepage" {
   description = "Homepage URL for PlaygroundTech API"
   type        = string
-  default     = "https://github.com/eliaskr1/tf-job-application"
 }

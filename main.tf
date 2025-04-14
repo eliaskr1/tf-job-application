@@ -8,25 +8,34 @@ terraform {
 }
 
 provider "playgroundtech" {
-  email    = var.email
-  password = var.password
+  email        = var.email
+  password     = var.password
 }
 
 resource "playgroundtech_application" "elias_kroon" {
-  email   = var.email
+  email        = var.email
   phone_number = var.phone_number
-  linkedin = var.linkedin
-  github  = var.github
-  homepage = var.homepage
+  linkedin     = var.linkedin
+  github       = var.github
+  homepage     = var.homepage
 }
 
-resource "null_resource" "humor" {
+resource "null_resource" "provision" {
   provisioner "local-exec" {
-    command = "echo 'Provisioning Elias... Please stand by...'"
+    command = <<EOT
+    echo "   (•_•)"
+    echo "  <)   )╯ Provisioning Elias..."
+    echo "  /    \\"
+    EOT
   }
 
   provisioner "local-exec" {
     when    = destroy
-    command = "echo 'Deprovisioning Elias... Hopefully not necessary!'"
+    command = <<EOT
+      echo "   (╥_╥)"
+      echo "  <)   )╯ Deprovisioning Elias..."
+      echo "  /    \\"
+      echo "Elias has left the infrastructure."
+      EOT
   }
 }
