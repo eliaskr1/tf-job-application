@@ -11,8 +11,7 @@ This repo contains the full Terraform configuration used to apply for the positi
 ## 🔧 What's Inside?
 
 - ✅ Terraform module using the [PlaygroundTech provider](https://registry.terraform.io/providers/playgroundtech/playgroundtech/latest)
-- 💾 Secrets stored in `.auto.tfvars` for clean variable injection
-- 🤖 GitHub Actions workflow to auto-apply on push
+- 🤖 GitHub Actions workflow to auto-apply on push using repository secrets
 - ✨ A sprinkle of personality!
 
 ---
@@ -22,7 +21,7 @@ This repo contains the full Terraform configuration used to apply for the positi
 - Terraform `v1.x`
 - PlaygroundTech provider `v0.0.3`
 - GitHub Actions (CI/CD)
-- ASCII art, humor & infrastructure as a love language ❤️
+- ASCII art & infrastructure as a love language ❤️
 
 ---
 
@@ -51,7 +50,7 @@ The module does the following:
 
 ## 🤖 GitHub Actions Included
 
-Whenever I push to `main`, the GitHub Actions workflow applies the Terraform module automatically — CI/CD style.  
+Whenever I push to `master`, the GitHub Actions workflow applies the Terraform module automatically — CI/CD style.  
 Check out the [workflow file](.github/workflows/deploy.yml).
 
 ---
@@ -61,7 +60,7 @@ Check out the [workflow file](.github/workflows/deploy.yml).
 - 💻 SRE intern at Extenda Retail
 - 🎓 DevOps Engineer student at Nackademin
 - 🚀 Passionate about automation, infrastructure, and cloud  
-- 🐍 Python & Node.js fan  
+- 🐍 Python & Node.js enjoyer  
 - 🌐 See more here --> https://eliaskr1.github.io/portfolio/
 
 Let’s build cool stuff together.
